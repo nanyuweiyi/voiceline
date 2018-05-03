@@ -9,7 +9,7 @@
 ```groovy
 implementation 'com.github.nanyuweiyi:voiceline:1.0.0'
 ```
-####自定义属性列表如下：
+#### 自定义属性列表如下：
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
