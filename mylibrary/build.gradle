@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+
+version = "1.0.6"                                //项目版本号
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'voiceLine'                                //项目名字
+
+    publishedGroupId = 'com.carlos.voiceline'                //GroupId,这个要别人引用的时候会用到，
+    libraryName = 'voiceLineLibrary'                         //这个是项目名字
+    artifact = 'mylibrary'                                   //artifactId，这个也是别人引用的时候，会用到
+
+    libraryDescription = '一个可以根据音量显示波形的控件'       //项目描述
+
+    siteUrl = 'https://github.com/ws123/VoiceLine'          //把项目分享到github后的项目地址
+    gitUrl = 'https://github.com/ws123/VoiceLine.git'       //分享后的项目git地址
+
+    libraryVersion = '1.0.6'
+
+    developerId = 'carlos'                             //这个开发者id，自己写
+    developerName = 'carlos'                           //这个是开发者名字
+    developerEmail = '372532647@qq.com'                //开发者邮箱
+
+    licenseName = 'The Apache Software License, Version 2.0'     //开源协议
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+task androidJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.encoding = "UTF-8"
+        }
+    }
+}
