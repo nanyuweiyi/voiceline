@@ -59,3 +59,6 @@ implementation 'com.github.nanyuweiyi:voiceline:1.0.0'
         voiceView:voiceLine="@android:color/holo_red_light" /> 
 ```
 
+## 其它
+`Star`是对我的最大支持. 谢谢
+
