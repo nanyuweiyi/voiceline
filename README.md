@@ -7,7 +7,7 @@
 引用方法：
 
 ```groovy
-implementation 'com.github.nanyuweiyi:voiceline:1.0.0'
+implementation 'com.github.nanyuweiyi:voiceline:1.0.1'
 ```
 #### 自定义属性列表如下：
 ```xml
@@ -45,7 +45,7 @@ implementation 'com.github.nanyuweiyi:voiceline:1.0.0'
 实际使用过程中，可以这样配置：
 
 ```xml
-    <com.carlos.voiceline.mylibrary.VoiceLineView
+    <com.nanyuweiyi.voiceline.VoiceLineView
         android:id="@+id/voicLine"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
