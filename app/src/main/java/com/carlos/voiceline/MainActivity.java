@@ -7,7 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 
-import com.carlos.voiceline.mylibrary.VoiceLineView;
+import com.nanyuweiyi.voiceline.VoiceLineView;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,17 +17,18 @@ import java.io.IOException;
  * 描   述: 波形显示
  * 作   者：tnn
  * 创建日期：2018/5/3
- * 版   本：1.0.0
+ * 版   本：1.0.1
+ * 修改日期：2018/5/4
  * ================================================
  */
 public class MainActivity extends AppCompatActivity implements Runnable {
     private MediaRecorder mMediaRecorder;
     private boolean isAlive = true;
     private VoiceLineView voiceLineView;
-    public Handler handler=new BaseHandler<>(new BaseHandler.BaseHandlerCallBack() {
+    public Handler handler = new BaseHandler<>(new BaseHandler.BaseHandlerCallBack() {
         @Override
         public void callBack(Message msg) {
-            if(mMediaRecorder==null) return;
+            if (mMediaRecorder == null) return;
             double ratio = (double) mMediaRecorder.getMaxAmplitude() / 100;
             double db = 0;// 分贝
             //默认的最大音量是100,可以修改，但其实默认的，在测试过程中就有不错的表现
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         if (mMediaRecorder == null) {
             mMediaRecorder = new MediaRecorder();
         }
-
         mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_NB);
         mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT);

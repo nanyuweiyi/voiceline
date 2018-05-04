@@ -1,4 +1,4 @@
-package com.carlos.voiceline.mylibrary;
+package com.nanyuweiyi.voiceline;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,8 +13,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by carlos on 2016/1/29.
- * 自定义声音振动曲线view
+ * ================================================
+ * 描   述: 自定义声音振动曲线view
+ * 作   者：tnn
+ * 创建日期：2018/5/4
+ * 版   本：1.0.1
+ * ================================================
  */
 public class VoiceLineView extends View {
 

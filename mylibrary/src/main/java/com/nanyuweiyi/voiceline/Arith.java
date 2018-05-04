@@ -1,9 +1,14 @@
-package com.carlos.voiceline.mylibrary;
+package com.nanyuweiyi.voiceline;
 
 import java.math.BigDecimal;
 
 /**
- * Created by carlos on 2016/4/5.
+ * ================================================
+ * 描   述: 方法
+ * 作   者：tnn
+ * 创建日期：2018/5/3
+ * 版   本：1.0.1
+ * ================================================
  */
 public class Arith{
 

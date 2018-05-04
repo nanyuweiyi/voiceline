@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_bright">
 
-    <com.carlos.voiceline.mylibrary.VoiceLineView
+    <com.nanyuweiyi.voiceline.VoiceLineView
         android:id="@+id/voicLine"
         android:layout_width="match_parent"
         android:layout_height="1000dp"
