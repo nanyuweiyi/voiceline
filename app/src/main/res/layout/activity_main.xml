@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:voiceView="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_bright">
+    android:background="#000"
+    android:orientation="vertical">
 
     <com.nanyuweiyi.voiceline.VoiceLineView
         android:id="@+id/voicLine"
         android:layout_width="match_parent"
-        android:layout_height="1000dp"
+        android:layout_height="200dp"
         android:background="@android:color/white"
-        voiceView:maxVolume="200"
+        voiceView:maxVolume="150"
         voiceView:middleLine="@android:color/black"
         voiceView:middleLineHeight="1dp"
         voiceView:fineness="three"
         voiceView:sensibility="four"
         voiceView:lineSpeed="90"
         voiceView:voiceLine="@android:color/holo_green_dark" />
-</RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvstart"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="开始录音"
+        android:textColor="#fff"
+        android:background="#789"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvstop"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="停止录音"
+        android:textColor="#fff"
+        android:background="#789"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+
+</LinearLayout>
